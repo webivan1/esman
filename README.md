@@ -2,6 +2,10 @@
 
 <h3>Установка</h3>
 
-<p>git clone git@github.com:webivan1/esman.git ./</p>
-<p>npm istall</p>
-$ npm start
+<h5>Сервер node js</h5>
+
+<div>
+  <b>git clone git@github.com:webivan1/esman.git</b> ./ <br />
+  <b>npm istall</b> <br />
+  <b>npm start</b>
+</div>
