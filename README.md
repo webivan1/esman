@@ -1,3 +1,2 @@
-# esman
+# esman Javascript ES6
 
-<h1>Javascript ES6</h1>
