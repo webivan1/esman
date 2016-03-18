@@ -8,7 +8,9 @@
   git clone git@github.com:webivan1/esman.git ./ <br />
   cd src <br />
   npm istall <br />
-  npm start
+  npm start <br />
+  <hr />
+  <i>http://localhost:5000</i>
 </div>
 
 <h5>Yii2 install</h5>
@@ -20,4 +22,6 @@
   php composer.phar update <br />
   cd ../src <br />
   npm webpack --watch
+  <hr />
+  <i>http://{mysite}</i>
 </div>
