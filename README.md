@@ -2,6 +2,6 @@
 
 <h3>Установка</h3>
 
-$ git clone git@github.com:webivan1/esman.git ./
-$ npm istall
+<p>git clone git@github.com:webivan1/esman.git ./</p>
+<p>npm istall</p>
 $ npm start
