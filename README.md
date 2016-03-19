@@ -1,27 +1,20 @@
-# esman Javascript ES6
+# esman Javascript ES6 + PHP Yii2
 
 <h3>Установка</h3>
 
-<h5>- Сервер node js</h5>
+<p>Поставить node.js - <a target="blank" href="https://nodejs.org/en/">nodejs.org/en</p>
+<p>Локальный сервер - <a target="blank" href="http://open-server.ru/download/">open-server.ru</p>
 
 <div>
-  git clone git@github.com:webivan1/esman.git ./ <br />
-  cd src <br />
-  npm istall <br />
-  npm start <br />
-  <hr />
-  <i>http://localhost:5000</i>
-</div>
-
-<h5>Yii2 install</h5>
-
-<div>
-  git clone git@github.com:webivan1/esman.git ./ <br />
+  git clone https://github.com/webivan1/esman.git ./ <br />
   cd backend <br />
   php composer.phar self-update <br />
   php composer.phar update <br />
-  cd ../src <br />
+  cd ../frontend <br />
+  npm install <br />
   npm webpack --watch
   <hr />
   <i>http://{mysite}</i>
 </div>
+
+<p>Prodaction version javascript - <b>npm run build</b></p>
