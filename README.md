@@ -21,4 +21,4 @@
 
 <hr />
 
-<p>Пример: <a href="esman.btmax.ru" target="_blank">esman</a></p>
+<p>Пример: <a href="http://esman.btmax.ru" target="_blank">esman</a></p>
