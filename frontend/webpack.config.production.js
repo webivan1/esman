@@ -45,7 +45,7 @@ var path = require('path');
 module.exports = {
   entry: './src/index',
   output: {
-    path: path.join(__dirname, '../public/assets/js'),
+    path: path.join(__dirname, '../public/build/js'),
     filename: 'bundle.js'
     //publicPath: '/static/'
   },

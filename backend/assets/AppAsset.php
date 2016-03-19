@@ -21,11 +21,11 @@ class AppAsset extends AssetBundle
     
     public $css = [
         'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
-        'assets/css/site.css',
+        'build/css/site.css',
     ];
 
     public $js = [
-        'assets/js/bundle.js'
+        'build/js/bundle.js'
     ];
     
     public $depends = [
