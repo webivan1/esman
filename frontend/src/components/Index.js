@@ -9,8 +9,8 @@ export class Index extends Component {
 	}
 
 	sibscribe() {
-		$('button').on('click', function() {
+		$('button').off().on('click', function() {
 			alert('Click Btn!');
-		})
+		});
 	}
 }
