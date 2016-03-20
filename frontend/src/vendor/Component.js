@@ -1,5 +1,7 @@
 export class Component {
-	constructor() {}
+	constructor() {
+		this.Router = App.Router;
+	}
 
 	fetch(link, method, data = {}, action) {
 		$.ajax({
