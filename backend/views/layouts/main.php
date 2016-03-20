@@ -34,11 +34,11 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Home', 'url' => ['/site/index'], 'options' => ['data-router' => 'PageIndex']],
+            ['label' => 'About', 'url' => ['/site/about'], 'options' => ['data-router' => 'PageAbout']],
+            ['label' => 'Contact', 'url' => ['/site/contact'], 'options' => ['data-router' => 'PageContacts']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => 'Login', 'url' => ['/site/login'], 'options' => ['data-router' => 'PageLogin']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')

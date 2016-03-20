@@ -80,11 +80,12 @@ export class Router {
 
 	valid(href, link) {
 		if (
-			href.match('/^http/') ||
-			link.attr('target') || 
-			link.attr('data-target')
-		) return false;
-		return true;
+			! href.match(/^(http|https)/) &&
+			! href.match(/^\/\//) &&
+			link.attr('target') != '_blank' &&
+			! link.attr('data-target')
+		) return true;
+		return false;
 	}
 
 	render() {

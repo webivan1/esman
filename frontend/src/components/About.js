@@ -1,8 +1,8 @@
 import { Component } from '../vendor/Component';
 
-export class Contacts extends Component {
+export class About extends Component {
 	constructor() {
 		super();
-		console.log('Contacts component');
+		console.log('About component');
 	}
 }
