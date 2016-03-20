@@ -26,9 +26,10 @@ export class Router {
 	 */
 	rule() {
 		let rule = false;
+		let url = this.getLocation();
 		
 		this.rules.forEach(value => {
-			if (this.location.match(value.url)) {
+			if (url.match(value.url)) {
 				rule = true;
 				this.component = value.component;
 				this.active = value.name;
@@ -37,6 +38,10 @@ export class Router {
 
 		if (this.component === false || rule === false)
 			this.component = App.RulesDefault;
+	}
+
+	getLocation() {
+		return this.location.split('?')[0];
 	}
 
 	run() {
@@ -151,5 +156,12 @@ export class Router {
 				self.render();
 			});
 		}
+	}
+
+	toUrl(url) {
+		this.location = url;
+		this.replaceUrl(this.location);
+		this.render();
+		return false;
 	}
 }

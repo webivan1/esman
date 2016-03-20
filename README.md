@@ -23,6 +23,7 @@
   npm install <br />
   npm webpack --watch
   <hr />
+  Создать каталог assets в папке public <br />
   <i>http://{mysite}</i>
 </div>
 

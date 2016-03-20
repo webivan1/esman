@@ -34,5 +34,5 @@ App.Rules = [
 App.RulesDefault = [Default];
 
 document.addEventListener('DOMContentLoaded', function main() {
-	new Router(App.Rules);
+	App.Router = new Router(App.Rules);
 });
