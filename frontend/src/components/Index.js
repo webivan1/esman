@@ -4,13 +4,15 @@ export class Index extends Component {
 	constructor() {
 		super();
 		console.log('Main component');
-
-		this.sibscribe();
 	}
 
-	sibscribe() {
-		$('button').off().on('click', function() {
-			alert('Click Btn!');
-		});
+	active(element) {
+		if (element.classList.contains('alert-danger')) {
+			element.classList.remove('alert-danger')
+			element.classList.add('alert-success');
+		} else {
+			element.classList.remove('alert-success')
+			element.classList.add('alert-danger');
+		}
 	}
 }

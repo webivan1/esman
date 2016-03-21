@@ -1,7 +1,10 @@
+// Текущий компонент this
+window.$scope = {};
+window.route = {};
 window.App = {
 	Components: {},
 	Rules: {},
-	Classes: []
+	content: '.app'
 };
 
 /**
@@ -25,14 +28,14 @@ import { About } from './components/About';
 import { Login } from './components/Login';
 
 App.Rules = [
-	{ url: /^(\/site\/index|\/)$/, name: 'PageIndex', component: [Index] },
-	{ url: /^\/site\/contact$/, name: 'PageContacts', component: [Contacts] },
-	{ url: /^\/site\/about$/, name: 'PageAbout', component: [Default, About] },
-	{ url: /^\/site\/login$/, name: 'PageLogin', component: [Login] }
+	{ url: /^(\/site\/index|\/)$/, name: 'PageIndex', component: Index },
+	{ url: /^\/site\/contact$/, name: 'PageContacts', component: Contacts },
+	{ url: /^\/site\/about$/, name: 'PageAbout', component: About },
+	{ url: /^\/site\/login$/, name: 'PageLogin', component: Login }
 ];
 
-App.RulesDefault = [Default];
+App.RulesDefault = Default;
 
 document.addEventListener('DOMContentLoaded', function main() {
-	App.Router = new Router(App.Rules);
+	route = new Router(App.Rules);
 });

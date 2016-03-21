@@ -4,8 +4,15 @@ import { Browser } from '../services/helpers/Browser';
 export class Router {
 	constructor(rules) {
 		this.location = RouteLocation;
-		this.content = $('.app');
+		this.content = $(App.content);
 		this.browser = new Browser();
+
+		this.varServerBody = 'ajax_body';
+		this.varServer = 'ajax';
+		this.varName = this.varServer;
+		
+		this.sendData = { 'var': this.varName };
+		this.method = 'POST';
 		
 		this.eventLink();
 		this.backUrl();
@@ -45,9 +52,7 @@ export class Router {
 	}
 
 	run() {
-		this.component.forEach((value, key) => {
-			App.Classes[key] = new value()
-		});
+		$scope = new this.component;
 	}
 
 	/**
@@ -120,9 +125,9 @@ export class Router {
 		const self = this;
 
 		$.ajax({
-			type: 'GET',
+			type: this.method,
 			url: self.location,
-			data: {'var': 'ajax'},
+			data: this.sendData,
 			async: false,
 			complete: function() {},
 			success: function(response) {
@@ -162,6 +167,21 @@ export class Router {
 		this.location = url;
 		this.replaceUrl(this.location);
 		this.render();
-		return false;
+	}
+
+	reload() {
+		this.render();
+	}
+
+	bodyUrl(url) {
+		this.content = $('body');
+		this.varName = this.varServerBody;
+
+		this.location = url;
+		this.replaceUrl(this.location);
+		this.render();
+
+		this.content = $(App.content);
+		this.varName = this.varServer;
 	}
 }

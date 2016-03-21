@@ -14,6 +14,10 @@ $this->title = 'My Yii Application';
         <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
 
+    <div class="alert alert-danger">
+        <button class="btn btn-primary" type="button" onclick="$scope.active(this.parentNode)">Клик!</button>
+    </div>
+
     <div class="body-content">
 
         <div class="row">
